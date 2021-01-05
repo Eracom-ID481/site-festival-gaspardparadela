@@ -1,14 +1,62 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    border-bottom: 1px solid black;
+    padding: 1rem
+}
+
+.date, .social {
+    height: 100%;
+}
+
+.date {
+    border-right: solid 1px black;
+}
+
+.date p {
+    padding: 1rem
+}
+
+.social {
+    display: flex;
+}
+
+.social>div {
+    border-left: 1px solid black;
+}
+
+.social>div p {
+    padding: 1rem;
+}
+
 /* Style des filtres de la grille horraire */
 #jours {
-  padding: 1rem;
+    padding: 1rem;
 }
+
 #jours ul {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 #jours ul li.active,
 #jours ul li:hover {
-  cursor: pointer;
-  text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.timetable .time-entry {
+    background-color: black;
 }
