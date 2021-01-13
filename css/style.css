@@ -12,43 +12,89 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 200px;
+    height: 250px;
     border-bottom: 1px solid black;
-    padding: 1rem
+    padding: 2rem
 }
 
-.date, .social {
+.social, .nav, .langue, .text {
     height: 100%;
 }
 
-.date {
+.nav, .langue, .social {
     border-right: solid 1px black;
 }
 
-.date p {
+.social, .footer, #jours {
+    justify-content: flex-start;
+}
+
+.nav {
+    border-bottom: solid 1px black;
+}
+
+.nav p, .langue p, #jours {
     padding: 1rem
 }
 
-.social {
+.social, .nav, .langue, .text, #jours {
     display: flex;
 }
 
-.social>div {
+.nav {
+    justify-content: space-between;
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.nav div,
+.nav div p {
+    width: 100%;
+    text-align: center;
+}
+
+.social>div, .nav>div, .langue>div {
     border-left: 1px solid black;
 }
 
-.social>div p {
+.social>div p, .nav>div p, .langue>div p {
     padding: 1rem;
+}
+
+.text {
+    text-align: left;
+    padding: 2rem;
+    border-bottom: solid 1px black;
+}
+
+.text p {
+    padding: 1rem;
+}
+
+.text1 {}
+
+.footer {
+    height: 150px;
+    background-color: black;
+    color: white;
 }
 
 /* Style des filtres de la grille horraire */
-#jours {
-    padding: 1rem;
+#jours b {
+    padding: 2rem;
+    font-family: 'Public Sans', sans-serif;
 }
 
-#jours ul {
+#jours {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+#jours b {
+    display: block;
+    text-align: center;
 }
 
 #jours ul li.active,
@@ -57,6 +103,328 @@ header {
     text-decoration: underline;
 }
 
+.timetable {
+    padding-bottom: 3rem;
+    width: 80%;
+}
+
 .timetable .time-entry {
     background-color: black;
+    border: 1px solid;
+}
+
+.timetable .time-entry.film {
+    background-color: #74b731;
+}
+
+.timetable .time-entry.conference {
+    background-color: #7699d0;
+}
+
+.timetable .time-entry.expo {
+    background-color: #bb4995;
+}
+
+.timetable .time-entry.concert {
+    background-color: #e25b2f;
+}
+
+.timetable .time-entry:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/*----------------------------------------Sideshow---------------------------------------------------------*/
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    display: flex;
+    padding: 2rem;
+    border-bottom: solid 1px black;
+    justify-content: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.textsideshow {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+Step 3) Add JavaScript: Example var slideIndex=1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex +=n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex=n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides=document.getElementsByClassName("mySlides");
+    var dots=document.getElementsByClassName("dot");
+
+    if (n > slides.length) {
+        slideIndex=1
+    }
+
+    if (n < 1) {
+        slideIndex=slides.length
+    }
+
+    for (i=0; i < slides.length; i++) {
+        slides[i].style.display="none";
+    }
+
+    for (i=0; i < dots.length; i++) {
+        dots[i].className=dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display="block";
+    dots[slideIndex-1].className+=" active";
+}
+
+/*----------------------------------------STYLE SHEET------------------------------------------------------*/
+/* body */
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* titles */
+h1, h2, h3, h4 {
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* data */
+table, table * {
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* quotes, lists */
+blockquote {
+    font-family: 'Public Sans', sans-serif;
+}
+
+ul, li {
+    font-family: 'Public Sans', sans-serif;
+}
+
+h1 {
+    font-size: 2.50rem;
+}
+
+/* 40px | 30pt */
+h2 {
+    font-size: 2.50rem;
+}
+
+/* 40px | 30pt */
+h3 {
+    font-size: 1.75rem;
+}
+
+/* 28px | 21pt */
+h4 {
+    font-size: 1.50rem;
+}
+
+/* 24px | 18pt */
+h5 {
+    font-size: 1.25rem;
+}
+
+/* 20px | 15pt */
+h6 {
+    font-size: 1.00rem;
+}
+
+/* 16px | 12pt */
+small, .small {
+    font-size: 85%;
+}
+
+/* 13.6px | 10.2pt */
+/* standard default ~= 0.8em = ~13px = ~10pt */
+small small,
+.x-small,
+.small .small {
+    font-size: 75%;
+    /* 12px | 9pt */
+}
+
+h2, h5, h6 {
+    font-style: italic;
+}
+
+/*	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	*/
+/*	FONT WEIGHTS	*/
+/* CSS Font Weights
+	100 (ultralight) – 900 (extrabold)
+	400 = normal
+	700 = bold
+*/
+body, p {
+    font-weight: 300;
+}
+
+b, strong {
+    font-weight: 500 !important;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+h1 b, h1 strong {
+    font-weight: 500 !important;
+}
+
+h2 b, h2 strong {
+    font-weight: 400 !important;
+}
+
+h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+h3 b, h3 strong,
+h4 b, h4 strong,
+h5 b, h5 strong,
+h6 b, h6 strong {
+    font-weight: 700 !important;
+}
+
+ul, li {
+    font-weight: 400;
+}
+
+/*	COLOR	*/
+body {
+    background-color: rgba(127, 124, 121, 0.2);
+    color: #322E29;
+}
+
+h1, h2, h3, h4 {
+    color: #64d92e;
+}
+
+/*	LINKS	*/
+a:link, a:visited, a:hover, a:active {
+    color: #2E2D2C;
+    text-decoration: none;
+    border-bottom: 1px solid #64d92e;
+}
+
+a:link {}
+
+a:visited {}
+
+a:hover {
+    background-color: rgba(122, 163, 204, 0.25);
+    border-bottom-color: #64d92e;
+}
+
+a:active {}
+
+/*	LISTS	*/
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    text-indent: -0.5rem;
+}
+
+li:before {
+    font-weight: 900;
+    content: "·";
+    color: #64d92e;
+    display: inline-block;
+    width: 0.5rem;
 }
