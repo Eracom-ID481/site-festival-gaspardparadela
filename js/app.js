@@ -46,7 +46,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 7, 20, 30),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
         timetable.addEvent(
@@ -62,7 +63,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 7, 22, 20),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
 
@@ -79,7 +81,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 7, 23, 30),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'concert'
             }
         );
 
@@ -95,7 +98,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 7, 18, 30),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'conference'
             }
         );
 
@@ -111,7 +115,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 7, 20, 00),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'expo'
             }
         );
 
@@ -127,7 +132,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 7, 20, 00),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'expo'
             }
         );
 
@@ -150,7 +156,8 @@ function drawTimetable(day) {
             //"film",
             new Date(2021, 5, 8, 12, 00),
             new Date(2021, 5, 8, 13, 30), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
 
@@ -160,7 +167,8 @@ function drawTimetable(day) {
             //"film",
             new Date(2021, 5, 8, 14, 00),
             new Date(2021, 5, 8, 15, 40), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
 
@@ -170,7 +178,8 @@ function drawTimetable(day) {
             //"conference",
             new Date(2021, 5, 8, 15, 40),
             new Date(2021, 5, 8, 16, 30), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'conference'
             }
         );
 
@@ -180,7 +189,8 @@ function drawTimetable(day) {
             //"film",
             new Date(2021, 5, 8, 17, 00),
             new Date(2021, 5, 8, 18, 30), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
 
@@ -190,7 +200,8 @@ function drawTimetable(day) {
             //"film",
             new Date(2021, 5, 8, 19, 00),
             new Date(2021, 5, 8, 20, 30), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
 
@@ -200,7 +211,8 @@ function drawTimetable(day) {
             //"concert",
             new Date(2021, 5, 8, 21, 00),
             new Date(2021, 5, 8, 22, 30), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'conference'
             }
         );
 
@@ -216,7 +228,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 8, 20, 00),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'expo'
             }
         );
 
@@ -232,7 +245,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 8, 20, 00),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'expo'
             }
         );
 
@@ -255,7 +269,8 @@ function drawTimetable(day) {
             //"film",
             new Date(2021, 5, 9, 13, 00),
             new Date(2021, 5, 9, 14, 00), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
         timetable.addEvent(
@@ -264,7 +279,8 @@ function drawTimetable(day) {
             //"film",
             new Date(2021, 5, 9, 14, 30),
             new Date(2021, 5, 9, 15, 00), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
 
@@ -274,7 +290,8 @@ function drawTimetable(day) {
             //"conference",
             new Date(2021, 5, 9, 14, 30),
             new Date(2021, 5, 9, 15, 20), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'conference'
             }
         );
 
@@ -284,7 +301,8 @@ function drawTimetable(day) {
             //"film",
             new Date(2021, 5, 9, 15, 50),
             new Date(2021, 5, 9, 16, 40), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
 
@@ -294,7 +312,8 @@ function drawTimetable(day) {
             //"film",
             new Date(2021, 5, 9, 17, 00),
             new Date(2021, 5, 9, 19, 50), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'film'
             }
         );
 
@@ -304,7 +323,8 @@ function drawTimetable(day) {
             //"concert",
             new Date(2021, 5, 9, 20, 00),
             new Date(2021, 5, 9, 21, 20), {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'concert'
             }
         );
 
@@ -320,7 +340,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 8, 20, 00),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'expo'
             }
         );
 
@@ -336,7 +357,8 @@ function drawTimetable(day) {
             new Date(2021, 5, 9, 20, 00),
             // URL Quand on clicke sur le lien
             {
-                url: "../artiste.html"
+                url: "../artiste.html",
+                class: 'expo'
             }
         );
 
