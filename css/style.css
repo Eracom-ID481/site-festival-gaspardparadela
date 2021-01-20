@@ -125,13 +125,15 @@ header {
     background-color: black;
     height: 11rem;
     display: flex;
+    align-items: center;
 }
 
 .footer img {
     padding: 3rem;
-    width: : 40%;
+    max-width: 50%;
     height: auto;
     flex: 0 1 auto;
+    object-fit: scale-down;
 }
 
 .footer p {
@@ -149,6 +151,9 @@ header {
 .event img {
     padding: 1.5rem;
     border: solid black 1px;
+    max-width: 100%;
+    min-width: 40%;
+    object-fit: cover;
 }
 
 .description {
@@ -157,16 +162,174 @@ header {
 }
 
 .description a,
-.description p {
+.description p,
+.description h3 {
     padding: 1.5rem;
     border: solid black 1px;
     border-left: none;
+}
+
+.description h3 {
+    border-bottom: none
 }
 
 .description a {
     border-top: none;
     text-decoration: none;
     color: black;
+}
+
+.description a:hover {
+    line-height: inherit;
+}
+
+@media all and (max-width: 690px) {
+    .event {
+        flex-direction: column;
+    }
+
+    .event img {
+        border: none;
+        min-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .event .description {
+        border-left: 1px solid black;
+    }
+}
+
+@media all and (max-width: 690px) {
+    .offre {
+        flex-direction: column-reverse;
+    }
+
+    .offre img {
+        border: none;
+        min-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .offre .descriptionA {
+        border-right: 1px solid black;
+    }
+}
+
+@media all and (max-width: 690px) {
+    .info2 {
+        display: none;
+    }
+
+    .info {
+        padding-bottom: 3rem;
+    }
+
+    .info img {
+        min-width: 40%;
+    }
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.entree {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-left: none;
+}
+
+.entree:first-child {
+    border-left: 1px solid black;
+}
+
+.entree p {
+    padding: 0.5rem;
+}
+
+.carrefilm {
+    height: 50px;
+    width: 50px;
+    background-color: #74b731;
+}
+
+.carreexpo {
+    height: 50px;
+    width: 50px;
+    background-color: #bb4995;
+}
+
+.carreconcert {
+    height: 50px;
+    width: 50px;
+    background-color: #e25b2f;
+}
+
+.carreconf {
+    height: 50px;
+    width: 50px;
+    background-color: #7699d0;
+}
+
+@media all and (max-width: 690px) {
+    .legend {
+        flex-direction: column;
+    }
+
+    .entree {
+        border-left: solid black 1px;
+        border-bottom: none;
+    }
+
+    .entree:last-child {
+        border-bottom: solid black 1px;
+    }
+}
+
+.offre {
+    display: flex;
+    padding: 3rem;
+}
+
+.offre img {
+    max-width: 100%;
+    min-width: 40%;
+    padding: 1.5rem;
+    border: solid black 1px;
+    object-fit: cover;
+}
+
+.descriptionA {
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionA a,
+.descriptionA p,
+.descriptionA h3 {
+    padding: 1.5rem;
+    border: solid black 1px;
+    border-right: none;
+}
+
+.descriptionA h3 {
+    border-bottom: none
+}
+
+.descriptionA a {
+    border-top: none;
+    text-decoration: none;
+    color: black;
+}
+
+.descriptionA a:hover {
+    line-height: inherit;
 }
 
 /* Style des filtres de la grille horraire */
